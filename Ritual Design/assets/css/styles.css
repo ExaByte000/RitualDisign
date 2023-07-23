@@ -1,0 +1,632 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Exclude specific elements from the background */
+
+
+/* Add background to the rest of the page */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header {
+    display: flex; justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    height: auto;
+    padding: 10px;
+}
+section.card{
+    width: 4%;
+    padding-left: 15px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+section.card img{
+    padding: 10px;
+    width: 35px;
+    height: auto;
+    border: 2px #9a9a9a solid;
+    border-radius: 100px;
+    position: fixed;
+}
+
+section.items{
+    display: none;
+    padding: 1%;
+    width: 250px;
+    top: 10%;
+    right: 5px;
+    height: auto;
+    border: 1px black solid;
+    border-radius: 5px;
+    position: fixed;
+    background: white;
+}
+.items .item{
+
+    width: 100%;
+    float: left;
+    border-top: 1px solid black;
+    clear: both;
+}
+.items .item img{
+    position: relative;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 20%;
+    height: auto;
+    float: left;
+}
+.items .item a.btn{
+    float: right;
+    margin-top: -35px;
+}
+.items .item p.name{
+    width: 80%;
+    float: left;
+    text-align: center;
+    color: black;
+}
+.items .item p.price{
+    width:100%;
+    float: left;
+    text-align: left;
+    text-decoration: red underline;
+}
+.tovar{
+    overflow: auto;
+    height: 300px;
+}
+.create{
+    text-align: center;
+    width: 80%;
+    padding: 4%;
+    margin:2% 5%;
+    font-size: 16px;
+    background: #88b06a;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.phone{
+    width: 80%;
+    padding: 4%;
+    margin:2% 5%;
+}
+.push{
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding:15px 10px;
+    text-align: center;
+    transition: color 0.3s;
+
+}
+
+nav ul li a:hover {
+    color: #88b06a;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    background: lightgray;
+    border-radius: 3px;
+}
+nav ul li:hover > ul{
+    display: inherit;
+}
+.menu-item2{
+    color: black;
+    padding: 5px;
+    width: 100px;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.hero h2.inf{
+    width: 40%;
+    padding-top: 30px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #383838;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #88b06a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #355d1a;
+}
+
+.products {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+h2{
+    text-align: center;
+}
+
+/* Company description */
+.company-description {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.company-description h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.company-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.text{
+    font-weight: bold;
+}
+.company-description ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 500px;
+    padding-left: 65px;
+    list-style-type: none;
+}
+
+.company-description ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+.company-description ul img{
+    width: 40px;
+    height: 40px;
+    padding-right: 5px;
+}
+.company-description ul div{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+/* Featured Products section */
+.featured-products {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.featured-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.product {
+    width: 300px;
+    margin: 20px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product p.price {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.product p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.product .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #88b06a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: #355d1a;
+}
+
+/* Services section */
+.services {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service {
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.ul{
+    display: flex;
+}
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 25px;
+}
+
+/* Contact section */
+.contact {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.contact .button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.contact .btn:hover {
+    background-color: #f7f7f7;
+}
+.coffins {
+    display: flex;
+    justify-content: space-around;
+}
+.desc{
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.desc p{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin: 25% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.hidden{
+    display: none;
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: white;
+
+}
+iframe{
+    padding: 10px;
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.count{
+    position: fixed;
+    background: #88b06a;
+    border-radius: 100px;
+    width: 35px;
+    text-align: center;
+    font-size:150%;
+}
+.push2{
+    display: none;
+}
+
+.info{
+ text-align: left;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .product {
+        flex-basis: calc(50% - 20px);
+    }
+    .coffins {
+        flex-basis: calc(50% - 20px);
+    }
+    .service{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 786px) {
+
+    section.desc{
+        padding-top: 250px;
+    }
+    .card{
+        text-align: right;
+        margin-left: 55%;
+        padding-top: 10px;
+        position: absolute;
+    }
+    .push{
+        display: none;
+    }
+    .push2{
+        display: block;
+        padding-bottom: 10px;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 3px 10px;
+    }
+    nav ul ul{
+        flex-direction: column;
+    }
+
+    .company-description ul div{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .company-description ul{
+        margin: 0 auto;
+        width: auto;
+        padding-left: 5%;
+    }
+    .product {
+        flex-basis: calc(50% - 20px);
+    }
+    .coffins {
+        flex-basis: calc(50% - 20px);
+    }
+    .about{
+        flex-direction: column;
+        padding: 15px;
+    }
+    iframe{
+        width: auto;
+    }
+    .hero{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width: 389px){
+    .menu-item{
+        width: 100px;
+    }
+
+    .company-description ul div{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .company-description ul{
+        margin: 0 auto;
+        width: auto;
+        padding-left: 5%;
+    }
+}
+
